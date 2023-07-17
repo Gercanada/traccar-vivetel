@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    background: theme.palette.primary.main,
+    background: 'linear-gradient(to top, #9252D5, #597AD9, #008C93)',
     paddingBottom: theme.spacing(5),
     width: theme.dimensions.sidebarWidth,
     [theme.breakpoints.down('lg')]: {

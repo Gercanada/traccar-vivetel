@@ -3,6 +3,7 @@ import { useTheme, useMediaQuery } from '@mui/material';
 import { useSelector } from 'react-redux';
 import { makeStyles } from '@mui/styles';
 import { ReactComponent as Logo } from '../resources/images/vivetel.svg';
+import { ReactComponent as Logo3 } from '../resources/images/vivetel-logoBlue.svg';
 
 const useStyles = makeStyles(() => ({
   image: {
@@ -29,7 +30,11 @@ const LogoImage = ({ color }) => {
     }
     return <img className={classes.image} src={logo} alt="" />;
   }
-  return <Logo className={classes.image} style={{ color }} />;
+  return expanded ? (
+    <Logo className={classes.image} style={{ color }} />
+  ) : (
+    <Logo3 className={classes.image} style={{ color }} />
+  );
 };
 
 export default LogoImage;
