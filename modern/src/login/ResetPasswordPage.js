@@ -96,7 +96,7 @@ const ResetPasswordPage = () => {
         )}
         <Button
           variant="contained"
-          color="secondary"
+          color="primary"
           onClick={handleSubmit}
           disabled={!/(.+)@(.+)\.(.{2,})/.test(email) && !password}
           fullWidth
