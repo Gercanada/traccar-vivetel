@@ -182,7 +182,7 @@ const LoginPage = () => {
           onClick={handlePasswordLogin}
           onKeyUp={handleSpecialKey}
           variant="contained"
-          color="secondary"
+          color="primary"
           disabled={!email || !password}
         >
           {t('loginLogin')}
@@ -201,7 +201,7 @@ const LoginPage = () => {
             className={classes.registerButton}
             onClick={() => navigate('/register')}
             disabled={!registrationEnabled}
-            color="secondary"
+            color="primary"
           >
             {t('loginRegister')}
           </Button>
