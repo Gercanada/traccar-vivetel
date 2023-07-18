@@ -60,7 +60,6 @@ const LoginPage = () => {
   const registrationEnabled = useSelector((state) => state.session.server.registration);
   const languageEnabled = useSelector((state) => !state.session.server.attributes['ui.disableLoginLanguage']);
   const changeEnabled = useSelector((state) => !state.session.server.attributes.disableChange);
-  const emailEnabled = useSelector((state) => state.session.server.emailEnabled);
   const openIdEnabled = useSelector((state) => state.session.server.openIdEnabled);
   const openIdForced = useSelector((state) => state.session.server.openIdEnabled && state.session.server.openIdForce);
 
@@ -214,16 +213,14 @@ const LoginPage = () => {
             </FormControl>
           )}
         </div>
-        {emailEnabled && (
-          <Link
-            onClick={() => navigate('/reset-password')}
-            className={classes.resetPassword}
-            underline="none"
-            variant="caption"
-          >
-            {t('loginReset')}
-          </Link>
-        )}
+        <Link
+          onClick={() => navigate('/reset-password')}
+          className={classes.resetPassword}
+          underline="none"
+          variant="caption"
+        >
+          {t('loginReset')}
+        </Link>
       </div>
       <Snackbar
         open={!!announcement && !announcementShown}
